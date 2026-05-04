@@ -1,40 +1,50 @@
-# AI/ML Integration Engineer Portfolio
+# AI/ML Integration Engineer | Paul Nyoike
 
-**Specialized in integrating AI/ML models into production backend systems.**
+> Integrating production-ready AI/ML models into backend systems | Python • FastAPI • TensorFlow • AWS
 
-### Tech Stack
-- **Languages**: Python, TypeScript
-- **ML Frameworks**: TensorFlow, PyTorch, Scikit-learn
-- **APIs**: FastAPI, REST/GraphQL
-- **Cloud**: AWS (SageMaker, Lambda, EC2, S3)
-- **Deployment**: Docker, Kubernetes, CI/CD
-- **Databases**: PostgreSQL, MongoDB
+## About Me
+Experienced **AI/ML Integration Engineer** specializing in bridging machine learning models with robust backend infrastructure. I help companies move from experimental ML models to scalable, reliable production systems.
 
-### Featured Projects
+## Technical Expertise
 
-#### 1. Odoo + AI Integration (Production Ready)
-- Integrated TensorFlow models into Odoo ERP for intelligent document processing and demand forecasting.
-- Built FastAPI microservices as bridge between Odoo and ML models.
-- Deployed on AWS with auto-scaling.
+### Core Skills
+- **Python Backend**: FastAPI, Flask, Django
+- **ML Frameworks**: TensorFlow, PyTorch, Scikit-learn, Hugging Face
+- **Model Deployment**: TensorFlow Serving, ONNX, FastAPI + Uvicorn
+- **Cloud & Infrastructure**: AWS (SageMaker, Lambda, EC2, S3, ECS)
+- **Data Pipelines**: Airflow, Prefect, Apache Kafka
+- **Databases**: PostgreSQL, Redis, MongoDB
+- **Containerization**: Docker, Docker Compose, Kubernetes
+- **MLOps**: MLflow, DVC, model monitoring & drift detection
 
-#### 2. M-Pesa + AI Fraud Detection System
-- Real-time transaction anomaly detection using ML.
-- Achieved 94% accuracy with low latency.
+### Highlight Projects
 
-#### 3. Intelligent Document Processing Pipeline
-- OCR + LLM-based data extraction.
-- Automated workflow using n8n + custom Python workers.
+**1. Odoo ERP + AI Integration** (Most Relevant)
+- Integrated TensorFlow models into Odoo for intelligent document classification and demand forecasting
+- Built secure FastAPI middleware layer between Odoo and ML services
+- Real-time inference with low latency
 
-### Key Skills for AI/ML Integration
-- Model serving with FastAPI + TensorFlow Serving
-- Data pipelines (Airflow / Prefect)
-- Model monitoring & drift detection
-- Secure API authentication & rate limiting
-- Cost optimization on AWS
+**2. Real-time Fraud Detection System**
+- Developed ML-powered fraud detection for financial transactions
+- Achieved 94%+ accuracy with sub-200ms response time
+- Deployed on AWS with auto-scaling
+
+**3. Intelligent Document Processing Pipeline**
+- OCR + LLM-powered data extraction and workflow automation
+- Integrated with n8n and custom Python workers
+
+## Why Hire Me?
+- Strong production engineering mindset (not just notebooks)
+- Experience integrating AI into existing enterprise systems (especially Odoo)
+- Clean, well-documented, and maintainable code
+- Fast learner with excellent communication
+
+## Let's Connect
+- 📧 Email: [Add your email]
+- 💼 LinkedIn: [Add link]
+- 🌍 Open to remote & contract opportunities
 
 ---
 
-**Open to freelance / contract opportunities**  
-📍 Kenya | 🌍 Remote  
-📧 [your.email@example.com] | 📞 [+254 ...]
+**Currently available for AI/ML Integration projects** — $5 Fixed-price or hourly.
 
