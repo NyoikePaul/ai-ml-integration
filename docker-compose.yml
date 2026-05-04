@@ -1,0 +1,11 @@
+services:
+  ml-api:
+    build: .
+    ports:
+      - "8002:8000"
+    environment:
+      - MODEL_PATH=/app/models/house_model.pkl
+    # Optional: mount model directory for updates without rebuild
+    volumes:
+      - ./models:/app/models
+    restart: unless-stopped
