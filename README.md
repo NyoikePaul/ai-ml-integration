@@ -41,8 +41,8 @@ Experienced **AI/ML Integration Engineer** specializing in bridging machine lear
 - Fast learner with excellent communication
 
 ## Let's Connect
-- 📧 Email: **paulnyoike.dev@gmail.com** (replace with yours)
-- 💼 LinkedIn: [Add your LinkedIn URL]
+- 📧 Email: **paulnyoike.dev@gmail.com** *(replace with your real email)*
+- 💼 LinkedIn: [Add your LinkedIn profile URL]
 - 🌍 **Open to remote & contract opportunities** (Worldwide)
 
 ---
