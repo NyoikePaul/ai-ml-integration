@@ -3,6 +3,7 @@
 > Integrating production-ready AI/ML models into backend systems | Python • FastAPI • TensorFlow • AWS
 
 ## About Me
+
 Experienced **AI/ML Integration Engineer** specializing in bridging machine learning models with robust backend infrastructure. I help companies move from experimental ML models to scalable, reliable production systems.
 
 ## Technical Expertise
@@ -19,7 +20,7 @@ Experienced **AI/ML Integration Engineer** specializing in bridging machine lear
 
 ### Highlight Projects
 
-**1. Odoo ERP + AI Integration** (Most Relevant)
+**1. Odoo ERP + AI Integration** *(Most Relevant)*
 - Integrated TensorFlow models into Odoo for intelligent document classification and demand forecasting
 - Built secure FastAPI middleware layer between Odoo and ML services
 - Real-time inference with low latency
@@ -34,17 +35,17 @@ Experienced **AI/ML Integration Engineer** specializing in bridging machine lear
 - Integrated with n8n and custom Python workers
 
 ## Why Hire Me?
-- Strong production engineering mindset (not just notebooks)
-- Experience integrating AI into existing enterprise systems (especially Odoo)
+- Strong **production engineering** mindset (not just notebooks)
+- Experience integrating AI into existing **enterprise systems** (especially Odoo)
 - Clean, well-documented, and maintainable code
 - Fast learner with excellent communication
 
 ## Let's Connect
-- 📧 Email: [Add your email]
-- 💼 LinkedIn: [Add link]
-- 🌍 Open to remote & contract opportunities
+- 📧 Email: **paulnyoike.dev@gmail.com** (replace with yours)
+- 💼 LinkedIn: [Add your LinkedIn URL]
+- 🌍 **Open to remote & contract opportunities** (Worldwide)
 
 ---
 
-**Currently available for AI/ML Integration projects** — $5 Fixed-price or hourly.
+**Currently available for AI/ML Integration projects** — Fixed-price or hourly.
 
