@@ -1,11 +1,10 @@
+version: '3.8'
 services:
-  ml-api:
+  api:
     build: .
     ports:
-      - "8002:8000"
-    environment:
-      - MODEL_PATH=/app/models/house_model.pkl
-    # Optional: mount model directory for updates without rebuild
-    volumes:
-      - ./models:/app/models
-    restart: unless-stopped
+      - "8000:8000"
+  postgres:
+    image: postgres:15-alpine
+  redis:
+    image: redis:7-alpine

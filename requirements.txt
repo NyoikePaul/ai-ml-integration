@@ -1,8 +1,4 @@
-fastapi==0.115.*
-uvicorn==0.30.*
-tensorflow==2.16.*
-numpy
-pandas
-scikit-learn
-python-dotenv
-pydantic
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+tensorflow==2.14.0
