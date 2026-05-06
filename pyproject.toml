@@ -1,3 +1,14 @@
 [project]
-name = "ai-ml-integration-engineer"
+name = "ai-ml-integration"
 version = "1.0.0"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+    "numpy",
+    "joblib",
+    "scikit-learn",
+]
+
+[tool.uv]
+dev-dependencies = []
