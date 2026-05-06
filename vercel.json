@@ -1,0 +1,4 @@
+{
+  "buildCommand": "mkdir -p public && cp docs/index.html public/index.html",
+  "outputDirectory": "public"
+}
