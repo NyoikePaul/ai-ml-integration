@@ -156,5 +156,7 @@ MIT - See [LICENSE](LICENSE)
 - 🐦 [@paulnyoike](https://twitter.com/paulnyoike)
 
 ---
+<img width="1366" height="725" alt="image" src="https://github.com/user-attachments/assets/5a16882a-0ded-4668-be7a-c2b7b85bf3b9" />
+
 
 ⭐ Star the repo if you find it useful!
