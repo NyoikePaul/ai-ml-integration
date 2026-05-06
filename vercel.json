@@ -9,7 +9,12 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/app/main.py"
+      "dest": "app/main.py"
     }
-  ]
+  ],
+  "functions": {
+    "app/main.py": {
+      "includeFiles": "models/**"
+    }
+  }
 }
