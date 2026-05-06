@@ -1,10 +1,16 @@
 {
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/index.html"
+  "buildCommand": "mkdir -p public && cp docs/index.html public/index.html && cp -r docs/* public/ 2>/dev/null || true",
+  "outputDirectory": "public",
+  "functions": {
+    "api/**": {
+      "memory": 3008,
+      "maxDuration": 30
     }
-  ],
-  "buildCommand": "mkdir -p public && cp docs/index.html public/index.html",
-  "outputDirectory": "public"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
