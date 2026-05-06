@@ -1,4 +1,15 @@
 {
-  "buildCommand": "mkdir -p public && cp docs/index.html public/index.html",
-  "outputDirectory": "public"
+  "version": 2,
+  "builds": [
+    {
+      "src": "app/main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/app/main.py"
+    }
+  ]
 }
