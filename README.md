@@ -157,6 +157,8 @@ MIT - See [LICENSE](LICENSE)
 
 ---
 <img width="1366" height="725" alt="image" src="https://github.com/user-attachments/assets/5a16882a-0ded-4668-be7a-c2b7b85bf3b9" />
+<img width="1365" height="684" alt="image" src="https://github.com/user-attachments/assets/f8fb8a5e-a3b7-4cdc-abac-2826d9477af5" />
+
 
 
 ⭐ Star the repo if you find it useful!
