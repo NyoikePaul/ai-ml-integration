@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Production-grade AI/ML Integration Platform - Enterprise ML serving with FastAPI, TensorFlow, and PostgreSQL">
-    <meta name="theme-color" content="#667eea">
-    <title>AI/ML Integration Platform - Enterprise ML Serving</title>
+    <meta name="description" content="AI/ML Integration Platform - Enterprise-grade machine learning serving infrastructure. Production-ready API with complete documentation, security hardening, and automated deployments.">
+    <meta name="theme-color" content="#000000">
+    <title>AI/ML Integration Platform | Enterprise ML Serving</title>
     
     <style>
         * {
@@ -14,21 +14,14 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #667eea;
-            --secondary: #764ba2;
-            --accent: #f093fb;
-            --dark: #0f1419;
-            --light: #f5f7fa;
-            --border: #e1e8ed;
-            --success: #10b981;
-            --warning: #f59e0b;
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1a1a1a;
             background: #ffffff;
             overflow-x: hidden;
         }
@@ -39,373 +32,439 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #e5e5e5;
             z-index: 1000;
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1rem 2rem;
         }
 
-        nav .container {
-            max-width: 1200px;
+        nav .wrapper {
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        nav .logo {
-            font-size: 1.5em;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        nav .brand {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #000;
+            letter-spacing: -0.5px;
         }
 
-        nav .links {
+        nav .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
-        nav .links a {
+        nav .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: #666;
+            font-size: 0.95rem;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
-        nav .links a:hover {
-            color: var(--primary);
+        nav .nav-links a:hover {
+            color: #000;
         }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        /* Hero */
+        .hero {
+            padding: 140px 2rem 120px;
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .hero-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #000;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #000;
             color: white;
-            padding: 150px 2rem 100px;
+        }
+
+        .btn-primary:hover {
+            background: #222;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #000;
+            border: 1px solid #ccc;
+        }
+
+        .btn-secondary:hover {
+            border-color: #000;
+            background: #f9f9f9;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-item h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .hero-image {
+            background: linear-gradient(135deg, #f0f0f0 0%, #e5e5e5 100%);
+            border-radius: 12px;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #ddd;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 2rem;
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .stats-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .stat {
             text-align: center;
-            margin-top: 60px;
-            position: relative;
-            overflow: hidden;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,100 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"/></svg>');
-            background-repeat: no-repeat;
-            background-position: bottom;
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 0.5rem;
         }
 
-        header .content {
-            position: relative;
-            z-index: 1;
-            max-width: 1200px;
+        .stat-label {
+            font-size: 0.95rem;
+            color: #777;
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 100px 2rem;
+            background: white;
+        }
+
+        .section-header {
+            max-width: 1400px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #777;
+            max-width: 500px;
             margin: 0 auto;
         }
 
-        header h1 {
-            font-size: 3.5em;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            animation: slideInDown 0.8s ease-out;
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
         }
 
-        header p {
-            font-size: 1.3em;
-            opacity: 0.95;
+        .feature-card {
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #000;
+            background: white;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+        }
+
+        .feature-card .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* Stack Section */
+        .stack-section {
+            padding: 100px 2rem;
+            background: #f9f9f9;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .stack-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stack-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .stack-item:hover {
+            border-color: #000;
+        }
+
+        .stack-item p {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 2rem;
+            background: white;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .cta-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-wrapper h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .cta-wrapper p {
+            font-size: 1rem;
+            color: #777;
             margin-bottom: 2rem;
-            animation: slideInUp 0.8s ease-out 0.2s backwards;
+            line-height: 1.8;
         }
 
         .cta-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
-            flex-wrap: wrap;
-            animation: slideInUp 0.8s ease-out 0.4s backwards;
-        }
-
-        .btn {
-            padding: 14px 35px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Stats Section */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 80px 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .stat {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: all 0.3s;
-            border-top: 4px solid var(--primary);
-        }
-
-        .stat:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-        }
-
-        .stat-number {
-            font-size: 3em;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            color: #666;
-            font-weight: 600;
-            font-size: 1.1em;
-        }
-
-        /* Section Title */
-        .section-title {
-            text-align: center;
-            margin: 80px 0 50px;
-            font-size: 2.5em;
-            color: #000;
-            font-weight: 800;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 3rem;
-            font-size: 1.1em;
-        }
-
-        /* Features Section */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 80px;
-        }
-
-        .feature {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-            border-left: 4px solid var(--primary);
-        }
-
-        .feature:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-        }
-
-        .feature-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
-
-        .feature h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-
-        .feature p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* Tech Stack */
-        .tech-stack {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 80px;
-        }
-
-        .tech {
-            background: linear-gradient(135deg, var(--light) 0%, white 100%);
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 600;
-            color: var(--primary);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s;
-            border: 1px solid var(--border);
-        }
-
-        .tech:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
-            border-color: var(--primary);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 80px 2rem;
-            text-align: center;
-            border-radius: 12px;
-            margin-bottom: 80px;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            font-size: 1.2em;
-            opacity: 0.95;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 80px;
         }
 
         /* Footer */
         footer {
-            background: var(--dark);
+            background: #000;
             color: white;
-            padding: 50px 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border);
+            padding: 4rem 2rem;
+            border-top: 1px solid #333;
         }
 
-        footer p {
-            margin: 10px 0;
-            opacity: 0.9;
+        .footer-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
         }
 
-        footer .footer-links {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
+        .footer-section h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
         }
 
-        footer a {
-            color: var(--primary);
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
             text-decoration: none;
-            transition: color 0.3s;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
         }
 
-        footer a:hover {
+        .footer-section a:hover {
             color: white;
         }
 
-        /* Animations */
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            nav .links {
-                gap: 1rem;
+        @media (max-width: 1024px) {
+            .hero-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
-            header h1 {
-                font-size: 2em;
+            .hero-content h1 {
+                font-size: 2.5rem;
             }
 
-            header p {
-                font-size: 1em;
+            .stats-wrapper {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .section-title {
-                font-size: 1.8em;
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stack-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            nav .nav-links {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 100px 1.5rem 80px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .stats-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stack-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
             }
 
             .cta-buttons {
@@ -414,180 +473,219 @@
 
             .btn {
                 width: 100%;
+                text-align: center;
+            }
+
+            nav .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
             }
         }
 
-        /* Utilities */
-        .text-center {
-            text-align: center;
-        }
-
-        .mt-5 {
-            margin-top: 5rem;
-        }
-
-        .mb-5 {
-            margin-bottom: 5rem;
+        /* Utility */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="container">
-            <div class="logo">🚀 AI/ML Platform</div>
-            <ul class="links">
+        <div class="wrapper">
+            <div class="brand">AI/ML Platform</div>
+            <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
-                <li><a href="#tech">Technology</a></li>
-                <li><a href="https://github.com/NyoikePaul/ai-ml-integration">GitHub</a></li>
+                <li><a href="#stack">Technology</a></li>
+                <li><a href="https://github.com/NyoikePaul/ai-ml-integration" target="_blank">GitHub</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header>
-        <div class="content">
-            <h1>🚀 AI/ML Integration Platform</h1>
-            <p>Production-Grade Machine Learning Serving Infrastructure</p>
-            <p style="font-size: 1em; opacity: 0.9; margin-bottom: 2rem;">Enterprise-ready APIs with complete documentation, security hardening, and automated CI/CD</p>
-            <div class="cta-buttons">
-                <a href="https://github.com/NyoikePaul/ai-ml-integration" class="btn btn-primary">⭐ Star on GitHub</a>
-                <a href="https://github.com/NyoikePaul/ai-ml-integration#readme" class="btn btn-secondary">📚 Read Documentation</a>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1>Production-Grade ML Serving Platform</h1>
+                <p>Enterprise-ready infrastructure for deploying machine learning models at scale. Complete with API documentation, security hardening, automated CI/CD, and zero-downtime deployments.</p>
+                
+                <div class="cta-group">
+                    <a href="https://github.com/NyoikePaul/ai-ml-integration" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <a href="https://github.com/NyoikePaul/ai-ml-integration#readme" target="_blank" class="btn btn-secondary">Read Documentation</a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div>
+                            <h4>Production Ready</h4>
+                            <p>Tested and verified at scale</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div>
+                            <h4>Fully Documented</h4>
+                            <p>2500+ lines of professional docs</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div>
+                            <h4>Enterprise Security</h4>
+                            <p>OWASP-compliant & hardened</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <div>
+                            <h4>Automated Deployment</h4>
+                            <p>GitHub Actions CI/CD included</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="hero-image">🚀</div>
         </div>
-    </header>
+    </section>
 
     <!-- Stats -->
-    <div class="container">
-        <div class="stats">
+    <section class="stats">
+        <div class="stats-wrapper">
             <div class="stat">
-                <div class="stat-number">95%+</div>
+                <div class="stat-value">95%+</div>
                 <div class="stat-label">Code Coverage</div>
-                <p style="color: #999; margin-top: 10px; font-size: 0.9em;">Comprehensive testing</p>
             </div>
             <div class="stat">
-                <div class="stat-number">2500+</div>
-                <div class="stat-label">Lines of Docs</div>
-                <p style="color: #999; margin-top: 10px; font-size: 0.9em;">Professional documentation</p>
+                <div class="stat-value">2500+</div>
+                <div class="stat-label">Lines of Documentation</div>
             </div>
             <div class="stat">
-                <div class="stat-number">&lt;100ms</div>
-                <div class="stat-label">Latency</div>
-                <p style="color: #999; margin-top: 10px; font-size: 0.9em;">Ultra-fast predictions</p>
+                <div class="stat-value">&lt;100ms</div>
+                <div class="stat-label">API Latency</div>
             </div>
             <div class="stat">
-                <div class="stat-number">∞</div>
+                <div class="stat-value">∞</div>
                 <div class="stat-label">Scalability</div>
-                <p style="color: #999; margin-top: 10px; font-size: 0.9em;">Kubernetes-ready</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Features Section -->
-    <div class="container">
-        <h2 class="section-title" id="features">✨ Enterprise Features</h2>
-        
+    <!-- Features -->
+    <section class="features-section" id="features">
+        <div class="section-header">
+            <h2>Enterprise Features</h2>
+            <p>Everything you need for production machine learning deployments</p>
+        </div>
+
         <div class="features-grid">
-            <div class="feature">
-                <div class="feature-icon">⚡</div>
+            <div class="feature-card">
+                <div class="icon">⚡</div>
                 <h3>Ultra-Low Latency</h3>
-                <p>Sub-100ms predictions with optimized inference engine, caching strategies, and load balancing.</p>
+                <p>Sub-100ms API responses with optimized inference, caching strategies, and intelligent request routing for high-throughput predictions.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon">🔒</div>
+
+            <div class="feature-card">
+                <div class="icon">🔒</div>
                 <h3>Enterprise Security</h3>
-                <p>OWASP-compliant APIs, end-to-end encryption, rate limiting, and comprehensive security hardening.</p>
+                <p>OWASP-compliant APIs, end-to-end encryption, rate limiting, input validation, and comprehensive security hardening out of the box.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon">📊</div>
+
+            <div class="feature-card">
+                <div class="icon">📊</div>
                 <h3>Complete Monitoring</h3>
-                <p>Real-time metrics, comprehensive logging, performance analytics, and alerting systems.</p>
+                <p>Real-time metrics, comprehensive logging, performance analytics, and alerting systems for production visibility and debugging.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon">🌍</div>
-                <h3>Global Scale</h3>
-                <p>Deploy anywhere with Docker, Kubernetes, and cloud-native architecture support.</p>
+
+            <div class="feature-card">
+                <div class="icon">🌍</div>
+                <h3>Global Deployment</h3>
+                <p>Deploy anywhere with Docker, Kubernetes, and cloud-native architecture. Multi-region support and zero-downtime deployments included.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon">📚</div>
-                <h3>Professional Docs</h3>
-                <p>2500+ lines of complete API documentation with examples in Python, cURL, and JavaScript.</p>
+
+            <div class="feature-card">
+                <div class="icon">📚</div>
+                <h3>Professional Documentation</h3>
+                <p>2500+ lines of complete API documentation with examples in Python, cURL, and JavaScript. Deployment and security guides included.</p>
             </div>
-            <div class="feature">
-                <div class="feature-icon">✅</div>
-                <h3>Production Ready</h3>
-                <p>95%+ code coverage, automated CI/CD pipeline, and comprehensive test suite included.</p>
+
+            <div class="feature-card">
+                <div class="icon">✅</div>
+                <h3>Tested & Verified</h3>
+                <p>95%+ code coverage, automated CI/CD pipeline, CodeQL security scanning, and comprehensive test suite for reliability.</p>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Technology Stack -->
-    <div class="container">
-        <h2 class="section-title" id="tech">🛠️ Technology Stack</h2>
-        
-        <div class="tech-stack">
-            <div class="tech">FastAPI</div>
-            <div class="tech">TensorFlow</div>
-            <div class="tech">PostgreSQL</div>
-            <div class="tech">Docker</div>
-            <div class="tech">Kubernetes</div>
-            <div class="tech">GitHub Actions</div>
-            <div class="tech">Redis</div>
-            <div class="tech">AWS/GCP</div>
-        </div>
-    </div>
+    <section class="stack-section" id="stack">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technology Stack</h2>
+                <p>Modern, battle-tested technologies for production deployments</p>
+            </div>
 
-    <!-- CTA Section -->
-    <div class="container">
-        <div class="cta-section">
-            <h2>Ready to Deploy?</h2>
-            <p>Get started with the most professional AI/ML platform available. Complete documentation, enterprise security, and automated deployments included.</p>
-            <div class="cta-buttons">
-                <a href="https://github.com/NyoikePaul/ai-ml-integration" class="btn btn-primary" style="color: var(--primary);">⭐ Star Repository</a>
-                <a href="https://github.com/NyoikePaul/ai-ml-integration/fork" class="btn btn-secondary">🍴 Fork & Deploy</a>
+            <div class="stack-grid">
+                <div class="stack-item"><p>FastAPI</p></div>
+                <div class="stack-item"><p>TensorFlow</p></div>
+                <div class="stack-item"><p>PostgreSQL</p></div>
+                <div class="stack-item"><p>Docker</p></div>
+                <div class="stack-item"><p>Kubernetes</p></div>
+                <div class="stack-item"><p>GitHub Actions</p></div>
+                <div class="stack-item"><p>Redis</p></div>
+                <div class="stack-item"><p>AWS/GCP</p></div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-wrapper">
+            <h2>Ready to Deploy?</h2>
+            <p>Get a complete, production-grade ML serving platform with professional documentation, security hardening, and automated deployments. Everything you need to scale machine learning in production.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/NyoikePaul/ai-ml-integration" target="_blank" class="btn btn-primary">View Repository</a>
+                <a href="https://github.com/NyoikePaul/ai-ml-integration/fork" target="_blank" class="btn btn-secondary">Fork & Deploy</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p><strong>Built with:</strong> FastAPI • TensorFlow • PostgreSQL • Docker • GitHub Actions</p>
-            <p><strong>Features:</strong> 95%+ Code Coverage • 2500+ Lines of Docs • CI/CD Pipeline • Enterprise Security</p>
-            <p>© 2026 Paul Nyoike. Open Source & Production Ready. MIT License.</p>
+        <div class="footer-wrapper">
+            <div class="footer-section">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="https://github.com/NyoikePaul/ai-ml-integration">Repository</a></li>
+                    <li><a href="https://github.com/NyoikePaul/ai-ml-integration#readme">Documentation</a></li>
+                    <li><a href="https://github.com/NyoikePaul/ai-ml-integration/issues">Issue Tracker</a></li>
+                </ul>
+            </div>
             
-            <div class="footer-links">
-                <a href="https://github.com/NyoikePaul/ai-ml-integration">🔗 GitHub</a>
-                <a href="https://github.com/NyoikePaul/ai-ml-integration/blob/main/LICENSE">📄 License</a>
-                <a href="https://github.com/NyoikePaul/ai-ml-integration/issues">🐛 Report Issues</a>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://github.com/NyoikePaul/ai-ml-integration/blob/main/CONTRIBUTING.md">Contributing</a></li>
+                    <li><a href="https://github.com/NyoikePaul/ai-ml-integration/blob/main/SECURITY.md">Security</a></li>
+                    <li><a href="https://github.com/NyoikePaul/ai-ml-integration/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://github.com/NyoikePaul/ai-ml-integration/blob/main/LICENSE">MIT License</a></li>
+                    <li><a href="https://github.com/NyoikePaul/ai-ml-integration/blob/main/CHANGELOG.md">Changelog</a></li>
+                    <li><a href="https://github.com/NyoikePaul">Author</a></li>
+                </ul>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Paul Nyoike. Production-grade AI/ML platform. MIT License.</p>
+        </div>
     </footer>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Add animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'slideInUp 0.6s ease-out forwards';
-                }
-            });
-        });
-
-        document.querySelectorAll('.stat, .feature, .tech').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>
