@@ -25,3 +25,12 @@ logs/
 .mypy_cache/
 .ruff_cache/
 .bandit
+
+# Security & Secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+.vault
